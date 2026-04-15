@@ -63,8 +63,20 @@
 #### Notes · Housekeeping
 
 - [x] ~~修复 `adaptive_network` 的 git 卫生~~ 完成于 2026-04-15，commit `f0a3d4f`（清理 ~149 MB 训练日志 + `.DS_Store` / `__pycache__` / `.pyc` from history；修 `adptive_network` 目录拼写；强化 `.gitignore`）
-- [ ] 合并 `HexBerlin` 账号下的 commit 归属（email 配置错位导致的映射问题）
+- [~] 合并 `HexBerlin` 账号下的 commit 归属 — **不修，改为声明**（见下一节"透明声明")
 - [ ] 若 Phase 2 重启，先把 `design.md` 的 TODO 转成可执行验收标准
+
+#### 透明声明：关于 `HexBerlin` 账号
+
+本人 2022-05 建过一个备用 GitHub 账号 [`HexBerlin`](https://github.com/HexBerlin)——0 repo、0 event、10 个技术 star，基本是僵尸号。当时把 `lib1292914@icloud.com` 绑在它上面；2025-02 用同一封邮箱 push [`adaptive_network`](https://github.com/Brentbin/adaptive_network) 时，GitHub 按 email 自动把 4 个 commit 的 attribution 挂到了 `HexBerlin` 的头像上，而不是仓库所有者 `Brentbin`。
+
+**为什么不修**：
+- GitHub 规则：每个账号至少一封 verified email。该邮箱是 `HexBerlin` 的唯一 email → 无法直接解绑。
+- 选项 1：删 `HexBerlin` 账号 → 解绑 → 加到 `Brentbin` → 归属自动迁移。技术上可行，但账号删除不可逆。
+- 选项 2：给 `adaptive_network` 做第二次历史重写，把 commit author email 改为 `users.noreply.github.com`。代价是又一次 force push、新 commit SHA 失效。
+- **选择**：两条都不走。成本 > 收益。这份声明本身就是解。
+
+**对读者的影响**：如果你在 `adaptive_network/commits` 页看到 "Lee Bin" 但头像链到 `HexBerlin`——那就是我。同一个人，两个 GitHub id，一个 email。透明度优先于表面整洁。
 
 ---
 
