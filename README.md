@@ -47,7 +47,7 @@
 - `specialization_scores` 全程停在 `0.3333...`（1/3 均匀分布）——**节点专门化机制没激活**，设计假设未被验证（见 `phase1/experiments/exp2/results/adaptive_results.json`）
 - pretrain 阶段 addition 任务 eval loss 在第 4 epoch 飙到 39.6（前一轮是 4.3）——训练不稳定，未深究
 - Phase 2 `docs/design.md` 留了 10+ 个 `TODO:`，多层思考控制的形式化从未完成
-- 工程纪律不合格：`.DS_Store` / `__pycache__` / ~150 MB 训练日志入库；目录名拼写错误 `adptive_network`（计划修复：见下方 Notes）
+- 工程纪律曾经不合格：`.DS_Store` / `__pycache__` / ~149 MB 训练日志入库，目录名拼写错误 `adptive_network`。**2026-04-15 用 `git filter-repo` 清理了历史（`.git` 28 MB → 1.3 MB）+ 重命名目录**（commit `f0a3d4f`）。承认问题，修复问题，保留证据。
 
 **值得记录的一件事**
 
@@ -62,7 +62,7 @@
 
 #### Notes · Housekeeping
 
-- [ ] 修复 `adaptive_network` 的 git 卫生（从历史中移除 `.DS_Store`、`__pycache__`、大文件日志；修 `adptive_network` 目录拼写）
+- [x] ~~修复 `adaptive_network` 的 git 卫生~~ 完成于 2026-04-15，commit `f0a3d4f`（清理 ~149 MB 训练日志 + `.DS_Store` / `__pycache__` / `.pyc` from history；修 `adptive_network` 目录拼写；强化 `.gitignore`）
 - [ ] 合并 `HexBerlin` 账号下的 commit 归属（email 配置错位导致的映射问题）
 - [ ] 若 Phase 2 重启，先把 `design.md` 的 TODO 转成可执行验收标准
 
