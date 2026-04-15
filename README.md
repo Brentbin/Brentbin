@@ -60,6 +60,36 @@
 - 29 个 fork：Auto-GPT、tensorflow、julia、spark、mahout、DIG、cygen、DEFMap、faceswap 等——**只是书签**，不代表任何贡献。
 - 我不维护公开库、不跑 OSS side project、不刷绿格子。
 
+#### Inner Portfolio · 私有项目清单
+
+除了公开的 [`adaptive_network`](https://github.com/Brentbin/adaptive_network)，我的日常代码集中在 org [`brentlee-personal-group`](https://github.com/brentlee-personal-group) 下。这些仓库**全部 private**（点进去会 404 或看到"Access required"），此处列出是为了让读者知道**存在什么、规模多大、大致在做什么**——不是展示、是审计可见性。
+
+| Repo | 语言 | 最近活动 | 审计描述（按 README 事实陈述，非自卖自夸）|
+|---|---|---|---|
+| `Argus` | JavaScript | 2026-04 | Visual Feedback Oracle for AI Coding Agents——给 AI 补上"看见自己写的 UI"的能力。**Early design phase**（README 自述）|
+| `Nomos` | Go | 2026-03 | Tick-based 游戏模拟引擎 + MCP 接入。600 ms/tick，12 阶段 pipeline，4 层交互模型（Command / Policy / Law / Prediction），有正式术语表和 30 分钟阅读路径。**51 MB Go 代码，持续活跃**——目前最有规模的项目 |
+| `agent-hub` | Python | 2026-01 | 双 Agent 数据分析系统（AutoGen v0.4+ · Azure OpenAI gpt-5 · Databricks Genie）。Planner + Executor 两角色拆分，有 pre-commit、Dockerfile、CODE_REVIEW_CHECKLIST |
+| `skills` | Python | 2026-01 | **Anthropic 官方 `anthropics/skills` 的 fork**，非原创。想看内容请直接去 https://github.com/anthropics/skills |
+| `next` | JavaScript | 2026-01 | Next.js 脚手架项目，产出有限 |
+| `workflow` | Python | 2025-10 | Workflow / orchestration 实验（api_servers + db + n8n_nodes + playground + tests） |
+| `Ratropolis_First_Whiskers_setting` | Markdown | 2026-02 | 独立游戏 Ratropolis 的世界观/剧情设定文档库（实验室叙事框架、种族、角色）|
+| `Ratropolis_First_Whiskers` | C# | 2024-11 | 同系列 C# 代码，活跃度低 |
+
+#### 申请访问（Request Access）
+
+如果你想看上表中某个 repo，请在 [`Brentbin/Brentbin`](https://github.com/Brentbin/Brentbin/issues/new) 开一个 issue，写清楚：
+
+1. **你是谁**（来自哪家团队 / 做什么 / GitHub handle）
+2. **你想看哪个 repo**（单个或多个）
+3. **用途**（只读 / collab / 参考 / 评估合作 / 其他）
+4. **身份证明**（可选：LinkedIn / 公司邮箱 / 介绍人）
+
+**回复 SLA**：7 个工作日内一条回复——同意 / 拒绝+理由 / 约 15 分钟视频聊再定。
+
+**默认允许的用途**：阅读、给我提 issue、讨论架构。
+**默认需要额外谈的用途**：fork / 二次分发 / 用于商业产品 / 用于招聘评估（正式 offer 场景下优先）。
+**直接拒绝的用途**：爬数据训练模型、未声明的评估、转卖。
+
 #### Notes · Housekeeping
 
 - [x] ~~修复 `adaptive_network` 的 git 卫生~~ 完成于 2026-04-15，commit `f0a3d4f`（清理 ~149 MB 训练日志 + `.DS_Store` / `__pycache__` / `.pyc` from history；修 `adptive_network` 目录拼写；强化 `.gitignore`）
